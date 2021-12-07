@@ -43,7 +43,50 @@ li {
 }
 
 /*Fin estilos generales*/
+/*Alerta*/
+.alert {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  order: 10000;
+  background-color: #000000f5;
+  z-index: 200;
+  color: white;
+  display: flex;
+  padding: 40px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
+.alert__quest {
+  font-size: 2rem;
+}
+
+.alert__options {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+
+.option {
+  background-color: #00000093;
+  width: 50%;
+  padding: 10px 0;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.option:hover {
+  background-color: #0f0f0fd2;
+  transition: 0.3s;
+}
+
+/*Fin alerta*/
 /*Header(hero)*/
 
 .hero {

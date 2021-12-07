@@ -56,4 +56,37 @@ const blur = () => {
 };
 btnBlur.addEventListener("click", blur);
 
-/* */
+/* GrayScale*/
+const grayScale = () => {
+  let body = document.getElementsByTagName("body")[0];
+  let element = document.createElement("div");
+  element.classList.add("alert");
+  element.innerHTML = `
+    <div class="alert__content">
+      <p class="alert__quest">¿Quisieras activar el modo Escala de grises?</p>
+      <div class="alert__options">
+        <span class="option option--y">Si</span>
+        <span class="option option--n">No</span>
+      </div>
+    </div>
+  `;
+  body.appendChild(element);
+};
+
+grayScale();
+
+const grayOptions = () => {
+  let yes = document.getElementsByClassName("option")[0];
+  let no = document.getElementsByClassName("option")[1];
+
+  yes.onclick = () => {
+    yes.parentElement.parentElement.parentElement.style.display = "none";
+    document.getElementsByTagName("html")[0].style.filter = "grayscale(1)";
+  };
+
+  no.onclick = () => {
+    no.parentElement.parentElement.parentElement.style.display = "none";
+    document.getElementsByTagName("html")[0].style.filter = "grayscale(0)";
+  };
+};
+grayOptions();
